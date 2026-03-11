@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0047AB;
+  --color-secondary: #F27D26;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.mobile-container {
+  @apply max-w-md mx-auto min-h-screen bg-white shadow-xl relative overflow-hidden flex flex-col;
+}
+
+.admin-shell {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(11, 86, 196, 0.18), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(242, 125, 38, 0.12), transparent 22%),
+    linear-gradient(180deg, #f4f7fb 0%, #eef3f9 100%);
+  color: #0f172a;
+}
+
+.nav-bottom {
+  @apply fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-gray-100 flex justify-around py-3 px-2 z-50;
+}
+
+.nav-item {
+  @apply flex flex-col items-center gap-1 text-gray-400 transition-colors;
+}
+
+.nav-item.active {
+  @apply text-primary;
+}
+
+.card-gradient-blue {
+  background: linear-gradient(135deg, #0047AB 0%, #002D6B 100%);
+}
+
+.card-gradient-orange {
+  background: linear-gradient(135deg, #F27D26 0%, #D15B00 100%);
+}
+
+.card-gradient-green {
+  background: linear-gradient(135deg, #28A745 0%, #1E7E34 100%);
+}
+
+.card-gradient-red {
+  background: linear-gradient(135deg, #DC3545 0%, #A71D2A 100%);
+}
+
+/* Custom scrollbar for a cleaner mobile look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+body.dark-mode {
+  background:
+    radial-gradient(circle at top, rgba(30, 64, 175, 0.18), transparent 28%),
+    linear-gradient(180deg, #07111f 0%, #0b1324 100%);
+  color: #e5eefb;
+}
+
+body.dark-mode .mobile-container {
+  background: linear-gradient(180deg, #0b1324 0%, #10192d 100%);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .admin-shell {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 26%),
+    linear-gradient(180deg, #07111f 0%, #0b1324 100%);
+  color: #e5eefb;
+}
+
+body.dark-mode .nav-bottom {
+  background: rgba(10, 17, 31, 0.94);
+  border-top-color: rgba(148, 163, 184, 0.16);
+  backdrop-filter: blur(14px);
+}
+
+body.dark-mode .nav-item {
+  color: #7f8da8;
+}
+
+body.dark-mode .nav-item.active {
+  color: #70a6ff;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #12336b 0%, #081a3e 100%);
+}
+
+body.dark-mode .bg-white {
+  background-color: #111a2d !important;
+}
+
+body.dark-mode .bg-gray-50 {
+  background-color: #0d1526 !important;
+}
+
+body.dark-mode .bg-gray-100 {
+  background-color: #172135 !important;
+}
+
+body.dark-mode .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.16) !important;
+}
+
+body.dark-mode .text-gray-900,
+body.dark-mode .text-gray-800,
+body.dark-mode .text-gray-700 {
+  color: #e6edf7 !important;
+}
+
+body.dark-mode .text-gray-600,
+body.dark-mode .text-gray-500,
+body.dark-mode .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .border-gray-50,
+body.dark-mode .border-gray-100,
+body.dark-mode .border-gray-200 {
+  border-color: rgba(148, 163, 184, 0.14) !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #172135 !important;
+  color: #e6edf7 !important;
+  border-color: rgba(148, 163, 184, 0.14) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #71829c !important;
+}
+
+body.dark-mode .shadow-sm,
+body.dark-mode .shadow-md,
+body.dark-mode .shadow-lg,
+body.dark-mode .shadow-xl {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .prose,
+body.dark-mode .prose p,
+body.dark-mode .prose li,
+body.dark-mode .prose strong,
+body.dark-mode .prose h1,
+body.dark-mode .prose h2,
+body.dark-mode .prose h3 {
+  color: #dbe7f5 !important;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #314158;
+}
