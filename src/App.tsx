@@ -421,7 +421,18 @@ const fallbackQuizzes: Quiz[] = [
         options: ['0 and 1', '1 and 2', '2 and 3', '0 and 9'],
         correctAnswer: 0,
         explanation: 'Binary uses only 0 and 1.'
-      }
+      },
+      {
+    id: 'q21',
+    topic: 'Computer Science',
+    questions: [
+      {
+        id: 'Q21',
+        text: 'What does KAJAL KHAYEGA?',
+        options: ['DAL BHAT', 'MASU BHAT', 'DAL BAHAT', 'Control Processing Utility'],
+        correctAnswer: 0,
+        explanation: 'CPU stands for Central Processing Unit.'
+      },
     ]
   }
 ];
